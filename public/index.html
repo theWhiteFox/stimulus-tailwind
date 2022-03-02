@@ -19,27 +19,52 @@
         <a href="">Our Team</a>
         <a href="">Contact Us</a>
       </div>
+
       <div
         data-menu-target="toggleable"
-        class="absolute right-0 hidden mb-2 mt-2 bg-white shadow-lg w-96 origin-top-right rounded-md ring-1 ring-black ring-opacity-5"
+        class="origin-top-right absolute right-0 mt-6 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="menu-button"
+        tabindex="-1"
       >
-        <div
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="options-menu"
-        >
+        <div class="py-1" role="none">
+          <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
           <a
-            href="/about"
-            class="block px-4 py-5 text-1xl text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+            href="#"
+            class="text-gray-700 block px-4 py-2 text-sm"
             role="menuitem"
-            >About</a
+            tabindex="-1"
+            id="menu-item-0"
+            >Account settings</a
           >
           <a
-            href="/posts"
-            class="block px-4 py-5 text-1xl text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+            href="#"
+            class="text-gray-700 block px-4 py-2 text-sm"
             role="menuitem"
-            >Posts</a
+            tabindex="-1"
+            id="menu-item-1"
+            >Support</a
           >
+          <a
+            href="#"
+            class="text-gray-700 block px-4 py-2 text-sm"
+            role="menuitem"
+            tabindex="-1"
+            id="menu-item-2"
+            >License</a
+          >
+          <form method="POST" action="#" role="none">
+            <button
+              type="submit"
+              class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+              role="menuitem"
+              tabindex="-1"
+              id="menu-item-3"
+            >
+              Sign out
+            </button>
+          </form>
         </div>
       </div>
       <div data-action="click->menu#toggle" class="flex lg:hidden">
