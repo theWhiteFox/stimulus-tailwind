@@ -1,5 +1,7 @@
 # Stimulus TailwindCSS Web App
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7190ec94-5a0c-4f47-a833-1d8c5ebb0ad8/deploy-status)](https://app.netlify.com/sites/stimulus-tailwind/deploys)
+
 A preconfigured blank slate for exploring [Stimulus](https://github.com/hotwired/stimulus). Jump to [The Stimulus Handbook](https://stimulus.hotwired.dev/handbook/introduction) for an introduction.
 
 ---
