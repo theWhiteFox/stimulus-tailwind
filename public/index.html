@@ -7,11 +7,63 @@
     <script src="bundle.js" async></script>
   </head>
   <body>
-    <div
-      data-controller="clipboard"
-      class="mt-4 flex flex-row justify-center outline-1"
+    <nav
+      data-controller="menu"
+      class="container flex justify-between px-4 py-8 mx-auto bg-white"
     >
-      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <img src="./img/theWhiteFox.png" alt="logo" />
+      <div class="hidden space-x-8 lg:flex">
+        <a href="">Home</a>
+        <a href="">About Us</a>
+        <a href="">Blogs</a>
+        <a href="">Our Team</a>
+        <a href="">Contact Us</a>
+      </div>
+      <div
+        data-menu-target="toggleable"
+        class="absolute right-0 hidden mb-2 mt-2 bg-white shadow-lg w-96 origin-top-right rounded-md ring-1 ring-black ring-opacity-5"
+      >
+        <div
+          role="menu"
+          aria-orientation="vertical"
+          aria-labelledby="options-menu"
+        >
+          <a
+            href="/about"
+            class="block px-4 py-5 text-1xl text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+            role="menuitem"
+            >About</a
+          >
+          <a
+            href="/posts"
+            class="block px-4 py-5 text-1xl text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+            role="menuitem"
+            >Posts</a
+          >
+        </div>
+      </div>
+      <div data-action="click->menu#toggle" class="flex lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </div>
+    </nav>
+    <div class="mt-4 flex flex-row justify-center outline-1">
+      <form
+        data-controller="clipboard"
+        class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+      >
         PIN:
         <input
           data-clipboard-target="source"
@@ -26,6 +78,8 @@
           Copy to Clipboard
         </button>
       </form>
+
+      <!-- This example requires Tailwind CSS v2.0+ -->
     </div>
   </body>
 </html>
